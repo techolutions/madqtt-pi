@@ -1,5 +1,3 @@
-setuptools
-wheel
 coloredlogs==14.0
 PyYAML==5.3.1
 paho-mqtt==1.5.1

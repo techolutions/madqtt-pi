@@ -19,4 +19,4 @@ devices:
     switchon: 'gpio -g mode 4 out; gpio -g write 4 1'
     switchoff: 'gpio -g mode 4 out; gpio -g write 4 0'
 log:
-  level: 'DEBUG'
+  level: 'INFO'
