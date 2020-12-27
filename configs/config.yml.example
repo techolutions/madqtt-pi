@@ -1,0 +1,22 @@
+mqtt:
+  topic: 'madqtt'
+  broker:
+    host: 'localhost'
+    port: 1883
+    user: 'mqttuser'
+    pass: 'mqttpass'
+devices:
+  ATV01:
+    mode: 'gpio'
+    channel: 2
+    relay: 'NO'
+  ATV02:
+    mode: 'rest'
+    switchon: 'https://www.example.com/atv02/on'
+    switchoff: 'https://www.example.com/atv02/off'
+  ATV03:
+    mode: 'cmd'
+    switchon: 'gpio -g mode 4 out; gpio -g write 4 1'
+    switchoff: 'gpio -g mode 4 out; gpio -g write 4 0'
+log:
+  level: 'DEBUG'

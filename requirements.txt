@@ -1,0 +1,7 @@
+setuptools
+wheel
+coloredlogs==14.0
+PyYAML==5.3.1
+paho-mqtt==1.5.1
+RPi.GPIO==0.7.0
+requests==2.24.0
