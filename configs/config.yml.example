@@ -6,7 +6,7 @@ mqtt:
     user: 'mqttuser'
     pass: 'mqttpass'
     tls:
-      enabled: true
+      enabled: false
 devices:
   ATV01:
     mode: 'gpio'
