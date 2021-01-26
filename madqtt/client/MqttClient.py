@@ -18,6 +18,10 @@ class MqttClient(StoppableThread):
         self._client.on_connect = self.on_connect
         self._client.on_disconnect = self.on_disconnect
         self._client.on_message = self.on_message
+
+        if config['mqtt']['broker']['tls']['enabled'] == True:
+            self._client.tls_set()
+
         self._deviceHandler = DeviceHandler()
 
     def stop(self):

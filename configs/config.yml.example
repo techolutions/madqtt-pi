@@ -5,6 +5,8 @@ mqtt:
     port: 1883
     user: 'mqttuser'
     pass: 'mqttpass'
+    tls:
+      enabled: true
 devices:
   ATV01:
     mode: 'gpio'
