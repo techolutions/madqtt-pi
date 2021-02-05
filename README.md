@@ -11,6 +11,7 @@ pip install -r requirements.txt --upgrade
 cd configs
 cp config.yml.example config.yml
 nano config.yml
+cd ..
 python start.py
 deactivate
 ```
