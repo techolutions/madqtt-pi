@@ -1,9 +1,15 @@
 # madqtt-pi #
 
 ## install ##
+
+create a service user for madqtt and grant rights for gpio:
 ```bash
 sudo adduser --system --home /opt/madqtt --group madqtt
 sudo adduser madqtt gpio
+```
+
+start bash as service user and install service
+```bash
 sudo -u madqtt bash
 cd /opt/madqtt
 git clone https://github.com/techolutions/madqtt-pi.git .
