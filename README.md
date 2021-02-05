@@ -2,20 +2,20 @@
 
 ## preconditions ##
 
-You need a mqtt-broker, for example mosquitto.
+You need a mqtt-broker, for example mosquitto:
 ```bash
 sudo apt install mosquitto
 ```
 
 ## install ##
 
-create a service user for madqtt and grant rights for gpio
+Create a service user for madqtt and grant rights for gpio usage:
 ```bash
 sudo adduser --system --home /opt/madqtt --group madqtt
 sudo adduser madqtt gpio
 ```
 
-start bash as service user and install service and requirements
+Start bash as service user and install service and requirements:
 ```bash
 sudo -u madqtt bash
 cd /opt/madqtt
@@ -25,13 +25,13 @@ python3 -m venv venv
 pip install -r requirements.txt --upgrade
 ```
 
-copy example config and adjust settings
+Copy example config and adjust settings:
 ```bash
 cp configs/config.yml.example configs/config.yml
 nano configs/config.yml
 ```
 
-try if everything works, deactivate venv, leave service user bash
+Try if everything works, deactivate venv, leave bash:
 ```bash
 python start.py
 deactivate
