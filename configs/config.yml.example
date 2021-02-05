@@ -3,8 +3,10 @@ mqtt:
   broker:
     host: 'localhost'
     port: 1883
-    user: 'mqttuser'
-    pass: 'mqttpass'
+    auth:
+      enabled: false
+      user: 'mqttuser'
+      pass: 'mqttpass'
     tls:
       enabled: false
 devices:

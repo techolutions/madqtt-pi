@@ -22,6 +22,9 @@ class MqttClient(StoppableThread):
         if config['mqtt']['broker']['tls']['enabled'] == True:
             self._client.tls_set()
 
+        if config['mqtt']['broker']['auth']['enabled'] == True:
+            self._client.username_pw_set(config['mqtt']['broker']['user'], config['mqtt']['broker']['pass'])
+
         self._deviceHandler = DeviceHandler()
 
     def stop(self):
@@ -29,7 +32,6 @@ class MqttClient(StoppableThread):
 
     def run(self):
         logger.info('trying to connect to mqtt broker %s:%d', config['mqtt']['broker']['host'], config['mqtt']['broker']['port'])
-        self._client.username_pw_set(config['mqtt']['broker']['user'], config['mqtt']['broker']['pass'])
         self._client.connect(config['mqtt']['broker']['host'], config['mqtt']['broker']['port'], 30)
         self._client.loop_forever(retry_first_connection=True)
 
