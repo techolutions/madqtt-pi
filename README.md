@@ -1,5 +1,9 @@
 # madqtt-pi #
 
+## preconditions ##
+
+you need a mqtt-broker to use this, for example mosquitto. for minimal security you need to restrict the access to your broker with username and password.
+
 ## install ##
 
 create a service user for madqtt and grant rights for gpio
