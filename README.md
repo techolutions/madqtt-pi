@@ -2,6 +2,7 @@
 
 ## install ##
 ```bash
+sudo su -
 cd /opt
 git clone https://github.com/techolutions/madqtt-pi.git
 cd madqtt-pi
@@ -14,4 +15,5 @@ nano config.yml
 cd ..
 python start.py
 deactivate
+logout
 ```
