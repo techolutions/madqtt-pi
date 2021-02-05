@@ -18,7 +18,7 @@ python3 -m venv venv
 pip install -r requirements.txt --upgrade
 ```
 
-copy example config and ajust settings
+copy example config and adjust settings
 ```bash
 cp configs/config.yml.example configs/config.yml
 nano configs/config.yml
