@@ -23,7 +23,7 @@ class MqttClient(StoppableThread):
             self._client.tls_set()
 
         if config['mqtt']['broker']['auth']['enabled'] == True:
-            self._client.username_pw_set(config['mqtt']['broker']['user'], config['mqtt']['broker']['pass'])
+            self._client.username_pw_set(config['mqtt']['broker']['auth']['user'], config['mqtt']['broker']['auth']['pass'])
 
         self._deviceHandler = DeviceHandler()
 
