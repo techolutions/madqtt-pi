@@ -57,6 +57,7 @@ WantedBy=multi-user.target
 
 ## restrict broker by user and password authentification ##
 For minimal security, it's recommended to restrict broker usage by username and password.
+
 First create a password file and add a user:
 ```bash
 sudo touch /etc/mosquitto/passwd
