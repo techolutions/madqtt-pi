@@ -2,7 +2,7 @@
 
 ## preconditions ##
 
-You need a mqtt-broker to use this, for example mosquitto.
+You need a mqtt-broker, for example mosquitto.
 ```bash
 sudo apt install mosquitto
 ```
