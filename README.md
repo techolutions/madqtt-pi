@@ -24,7 +24,7 @@ cp configs/config.yml.example configs/config.yml
 nano configs/config.yml
 ```
 
-try if everything works
+try if everything works, deactivate venv, leave service user bash
 ```bash
 python start.py
 deactivate
