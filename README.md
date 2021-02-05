@@ -74,5 +74,5 @@ password_file /etc/mosquitto/passwd
 ```
 Restart mosquitto:
 ```bash
-systemctl restart mosquitto.service
+sudo systemctl restart mosquitto.service
 ```
