@@ -6,6 +6,26 @@ You need a mqtt-broker to use this, for example mosquitto.
 ```bash
 sudo apt install mosquitto
 ```
+For minimal security, it's recommended to restrict broker usage by username and password.
+
+First create a password file and add a user:
+```bash
+sudo touch /etc/mosquitto/passwd
+sudo mosquitto_passwd -b /etc/mosquitto/passwd <user> <password>
+```
+Create a conf file for mosquitto:
+```bash
+sudo nano /etc/mosquitto/conf.d/default.conf
+```
+Insert the following content inside the conf file to restrict usage:
+```bash
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+```
+Restart mosquitto:
+```bash
+systemctl restart mosquitto.service
+```
 
 ## install ##
 
