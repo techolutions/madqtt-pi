@@ -28,14 +28,14 @@ class GpioHandler():
 
     def on(self):
         logger.debug('turning on gpio channel %d(%s)', self._channel, self._relay)
-        if self._relay == self.RELAY_NO:
+        if self._relay == self.RELAY_NC:
             GPIO.output(self._channel, GPIO.HIGH)
         else:
             GPIO.output(self._channel, GPIO.LOW)
 
     def off(self):
         logger.debug('turning off gpio channel %d(%s)', self._channel, self._relay)
-        if self._relay == self.RELAY_NO:
+        if self._relay == self.RELAY_NC:
             GPIO.output(self._channel, GPIO.LOW)
         else:
             GPIO.output(self._channel, GPIO.HIGH)
